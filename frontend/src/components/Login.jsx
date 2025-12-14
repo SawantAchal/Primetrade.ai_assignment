@@ -50,18 +50,18 @@ const Login = () => {
           <p className="text-center text-gray-500 mb-8">{state === 'Sign Up'? 'Create your account to get started': 'Login to your account'}</p>
           <form  onSubmit={handleSubmit}>
             {state === 'Sign Up' && (
-              <div className="mb-4 flex items-center gap-3 w-full px-5 py-3 rounded-full border border-gray-200 focus-within:border-indigo-500 transition">
+              <div className="mb-4 flex items-center gap-3 w-full px-5 py-3 rounded-full border border-gray-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 transition-all duration-200">
                 <input spellCheck={true} type="text" name='name' value={name} onChange={(e)=>setName(e.target.value)} placeholder="Full Name" className="bg-transparent outline-none w-full text-gray-700 placeholder-gray-400" required/>
               </div>
             )}
-            <div className="mb-4 flex items-center gap-3 w-full px-5 py-3 rounded-full border border-gray-200 focus-within:border-indigo-500 transition">
+            <div className="mb-4 flex items-center gap-3 w-full px-5 py-3 rounded-full border border-gray-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 transition-all duration-200">
               <input spellCheck={true} type="email" name='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email address" className="bg-transparent outline-none w-full text-gray-700 placeholder-gray-400" required/>
             </div>
-            <div className="mb-4 flex items-center gap-3 w-full px-5 py-3 rounded-full border border-gray-200 focus-within:border-indigo-500 transition">
+            <div className="mb-4 flex items-center gap-3 w-full px-5 py-3 rounded-full border border-gray-300 focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-100 transition-all duration-200">
               <input spellCheck={true} type="password" name='password' value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="bg-transparent outline-none w-full text-gray-700 placeholder-gray-400" required />
             </div>
             <p className="mb-6 text-right text-sm text-indigo-500 cursor-pointer hover:underline">Forgot Password?</p>
-            <button type='submit' className="cursor-pointer  px-4 py-3 rounded-full w-full font-medium shadow-md">{state}</button>
+            <button type='submit' className="cursor-pointer px-4 py-3 rounded-full w-full font-medium text-indigo-600 border border-indigo-500 bg-white shadow-sm transition-all duration-200 hover:bg-indigo-500 hover:text-white hover:shadow-md active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">{state}</button>
           </form>
           {state === 'Sign Up' ? (
             <p className="text-gray-500 text-center text-xs mt-6"> Already have an account?{' '}<span onClick={() => setState('Login')} className="text-indigo-600 cursor-pointer font-medium hover:underline"> Login here </span> </p>
